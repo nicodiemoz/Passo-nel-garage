@@ -1,42 +1,89 @@
+/* Stile di base */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f0fe; /* Colore di sfondo chiaro e piacevole */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
+/* Contenitore centrale */
 .container {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombra morbida */
+    max-width: 350px;
     text-align: center;
 }
 
-input, button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+/* Titolo */
+h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
+/* Input e pulsante */
+input, button {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+/* Input focus */
+input:focus {
+    border-color: #1a73e8; /* Cambio colore bordo al focus */
+}
+
+/* Stile pulsante */
 button {
-    background-color: #4CAF50;
+    background-color: #1a73e8;
     color: white;
     border: none;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#risultato {
     font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover ed effetto click */
+button:hover {
+    background-color: #1558b0; /* Colore più scuro all'hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Effetto di pressione */
+}
+
+/* Risultato del calcolo */
+#risultato {
+    font-size: 1.1em;
     margin-top: 15px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Animazione di transizione per il testo del risultato */
+#risultato.appear {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframes per l'animazione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
