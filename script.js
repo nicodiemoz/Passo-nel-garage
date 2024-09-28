@@ -19,6 +19,10 @@ document.getElementById("verifica-form").addEventListener("submit", function (ev
         ? "Il veicolo può entrare nel garage senza problemi!"
         : "Attenzione! Il veicolo potrebbe urtare il soffitto del garage.";
 
-    // Visualizza il risultato
-    document.getElementById("risultato").textContent = risultato;
+    // Visualizza il risultato con animazione
+    const risultatoElement = document.getElementById("risultato");
+    risultatoElement.textContent = risultato;
+    risultatoElement.classList.remove("appear"); // Rimuove l'animazione precedente se presente
+    void risultatoElement.offsetWidth; // Forza il reflow per riattivare l'animazione
+    risultatoElement.classList.add("appear"); // Aggiunge l'animazione
 });
