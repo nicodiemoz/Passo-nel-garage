@@ -1,89 +1,72 @@
-/* Stile di base */
+/* Stile di base del corpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e8f0fe; /* Colore di sfondo chiaro e piacevole */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
 }
 
-/* Contenitore centrale */
+/* Contenitore principale */
 .container {
     background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombra morbida */
-    max-width: 350px;
+    max-width: 450px;
+    width: 100%;
     text-align: center;
+    animation: fadeIn 0.5s ease;
 }
 
-/* Titolo */
+/* Titolo della pagina */
 h1 {
+    font-size: 1.6rem;
     color: #333;
-    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-/* Input e pulsante */
+/* Stile dei campi di input */
 input, button {
+    display: block;
     width: calc(100% - 20px);
+    margin: 10px auto;
     padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    font-size: 1em;
-    transition: border-color 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Input focus */
+/* Effetto focus sugli input */
 input:focus {
-    border-color: #1a73e8; /* Cambio colore bordo al focus */
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.2);
+    outline: none;
 }
 
-/* Stile pulsante */
+/* Stile del pulsante */
 button {
-    background-color: #1a73e8;
+    background: #1e90ff;
     color: white;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-/* Hover ed effetto click */
+/* Hover ed effetto click del pulsante */
 button:hover {
-    background-color: #1558b0; /* Colore più scuro all'hover */
+    background-color: #1c86ee;
 }
 
 button:active {
-    transform: scale(0.98); /* Effetto di pressione */
+    transform: scale(0.97);
 }
 
-/* Risultato del calcolo */
+/* Stile del messaggio di risultato */
 #risultato {
-    font-size: 1.1em;
-    margin-top: 15px;
-    color: #444;
-    font-weight: bold;
-}
-
-/* Animazione di transizione per il testo del risultato */
-#risultato.appear {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Keyframes per l'animazione */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    margin-top: 20px;
+   
