@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifica Accesso Garage</title>
+    <title>Verifica Passaggio Garage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Verifica se il veicolo entra nel garage</h1>
+        <h1>Verifica Se Il Veicolo Entra Nel Garage</h1>
         <form id="verifica-form">
-            <label for="passo">Lunghezza del passo del veicolo (cm):</label>
-            <input type="number" id="passo" required>
-
-            <label for="altezza-veicolo">Altezza del veicolo (cm):</label>
-            <input type="number" id="altezza-veicolo" required>
-
-            <label for="altezza-garage">Altezza del garage (cm):</label>
-            <input type="number" id="altezza-garage" required>
-
-            <label for="pendenza-rampa">Pendenza della rampa (%):</label>
-            <input type="number" id="pendenza-rampa" required>
-
+            <input type="number" id="passo" placeholder="Lunghezza del passo del veicolo (cm)" required>
+            <input type="number" id="altezza-veicolo" placeholder="Altezza del veicolo (cm)" required>
+            <input type="number" id="altezza-garage" placeholder="Altezza del garage (cm)" required>
+            <input type="number" id="pendenza-rampa" placeholder="Pendenza della rampa (%)" required>
             <button type="submit">Verifica</button>
         </form>
-
         <p id="risultato"></p>
     </div>
     <script src="script.js"></script>
