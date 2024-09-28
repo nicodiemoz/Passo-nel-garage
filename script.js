@@ -22,7 +22,5 @@ document.getElementById("verifica-form").addEventListener("submit", function (ev
     // Visualizza il risultato con animazione
     const risultatoElement = document.getElementById("risultato");
     risultatoElement.textContent = risultato;
-    risultatoElement.classList.remove("appear"); // Rimuove l'animazione precedente se presente
-    void risultatoElement.offsetWidth; // Forza il reflow per riattivare l'animazione
-    risultatoElement.classList.add("appear"); // Aggiunge l'animazione
+    risultatoElement.classList.add("appear");
 });
